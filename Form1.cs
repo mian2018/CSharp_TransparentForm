@@ -86,5 +86,10 @@ namespace CSharp_悬浮球
                 this.Location = this.PointToScreen(new Point(e.X - startPoint.X, e.Y - startPoint.Y));
             }
         }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

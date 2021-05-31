@@ -29,11 +29,16 @@ namespace CSharp_悬浮球
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labGIF = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labGIF
             // 
+            this.labGIF.ContextMenuStrip = this.contextMenuStrip1;
             this.labGIF.Image = global::CSharp_悬浮球.Properties.Resources.正常状态;
             this.labGIF.Location = new System.Drawing.Point(0, 0);
             this.labGIF.Name = "labGIF";
@@ -44,6 +49,20 @@ namespace CSharp_悬浮球
             this.labGIF.MouseLeave += new System.EventHandler(this.labGIF_MouseLeave);
             this.labGIF.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labGIF_MouseMove);
             this.labGIF.MouseUp += new System.Windows.Forms.MouseEventHandler(this.labGIF_MouseUp);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.退出ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -62,6 +81,7 @@ namespace CSharp_悬浮球
             this.Text = "Form1";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.SystemColors.Control;
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -69,6 +89,8 @@ namespace CSharp_悬浮球
         #endregion
 
         private System.Windows.Forms.Label labGIF;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
     }
 }
 
